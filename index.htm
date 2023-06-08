@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Random password</title>
+        <style>
+            section{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+            <section>
+                <h1>Random password Generator</h1>
+                <div>
+                    <input id="passLength" type="text" name="length" placeholder="Enter length of password" />
+                    <button onclick="generate()" type="button">Generate password</button>
+                </div>
+                <p id="password"></p>
+            </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
