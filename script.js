@@ -6,16 +6,28 @@ let allSymbols = letters.concat(numbers,symbols);
 
 function generate(){
     let passw = '';
-    let passLength = +document.getElementById("passLength").value;
-    console.log(passLength);
+    let lengthInp = document.getElementById("passLength");
+    let passLength = +lengthInp.value;
     let password = document.getElementById("password")
-    for (let i = 0; i < passLength; i++) {
-        passw += allSymbols[rnd()];
+
+    if(isValid(passLength)){
+        for (let i = 0; i < passLength; i++) {
+            passw += allSymbols[rnd()];
+        }
+        password.innerText = passw;
+    }else{
+        alert("You must enter a number more than 4")
     }
-    password.innerText = passw;
+    lengthInp.value = '';
 }
 
 function rnd(){
     return Math.floor(Math.random() * (allSymbols.length - 1));
 }
 
+function isValid(inpV){
+    if(inpV < 4){
+        return false;
+    }
+    return true;
+}

@@ -12,13 +12,16 @@
                 align-items: center;
                 flex-direction: column;
             }
+            input, button {
+                padding: 8px;
+            }
         </style>
     </head>
     <body>
             <section>
                 <h1>Random password Generator</h1>
                 <div>
-                    <input id="passLength" type="text" name="length" placeholder="Enter length of password" />
+                    <input id="passLength" type="number" name="length" placeholder="Enter length of password" />
                     <button onclick="generate()" type="button">Generate password</button>
                 </div>
                 <p id="password"></p>
